@@ -4,8 +4,8 @@ Shell script to install a [Poseidon Masternode](https://posq.io/) on a Linux ser
 
 ## Installation
 ```
-wget -q https://raw.githubusercontent.com/zoldur/Posq/master/poseidon_install.sh
-bash poseidon_install.sh
+wget -q https://raw.githubusercontent.com/zoldur/Posq/master/posq_install.sh
+bash posq_install.sh
 ```
 ***
 
