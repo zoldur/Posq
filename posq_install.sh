@@ -131,12 +131,14 @@ maxconnections=256
 masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-addnode=192.243.103.201
-addnode=192.243.103.202
-addnode=80.111.218.44
-addnode=192.143.101.179
-addnode=192.243.100.6
-addnode=192.243.100.65
+addnode=45.77.101.43:30793
+addnode=192.243.103.174:30793
+addnode=51.15.185.7:30793
+addnode=91.194.90.189:30793
+addnode=109.60.214.146:30793
+addnode=148.251.16.179:30793
+addnode=82.147.93.32:30793
+addnode=31.132.114.117:30793
 EOF
 }
 
@@ -236,7 +238,7 @@ function create_swap() {
  echo -e "Checking if swap space is needed."
  PHYMEM=$(free -g|awk '/^Mem:/{print $2}')
  SWAP=$(free -g|awk '/^Swap:/{print $2}')
- if [ "$PHYMEM" -lt "2" ] && [ -n "$SWAP" ]
+ if ][ "$PHYMEM" -lt "2"  &&  -z "$SWAP" ]]
   then
     echo -e "${GREEN}Server is running with less than 2G of RAM without SWAP, creating 2G swap file.${NC}"
     SWAPFILE=$(mktemp)
@@ -245,7 +247,7 @@ function create_swap() {
     mkswap $SWAPFILE
     swapon -a $SWAPFILE
  else
-  echo -e "${GREEN}Server running with at least 2G of RAM, no swap needed.${NC}"
+  echo -e "${GREEN}The server running with at least 2G of RAM, or a SWAP file is already in place.${NC}"
  fi
  clear
 }
