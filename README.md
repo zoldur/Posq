@@ -44,8 +44,8 @@ posq-cli masternode status
 
 ## Usage:
 ```
-posidon-cli masternode status  
-posidon-cli getinfo
+posq-cli masternode status  
+posq-cli getinfo
 ```
 Also, if you want to check/start/stop **POSQ**, run one of the following commands as **root**:
 ```
