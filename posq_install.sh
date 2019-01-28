@@ -1,13 +1,13 @@
 #!/bin/bash
 
 TMP_FOLDER=$(mktemp -d)
-CONFIG_FILE='poseidon.conf'
-CONFIGFOLDER='/root/.poseidon'
-COIN_DAEMON='poseidond'
-COIN_CLI='poseidon-cli'
+CONFIG_FILE='posq.conf'
+CONFIGFOLDER='/root/.posq'
+COIN_DAEMON='posqd'
+COIN_CLI='posq-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_REPO='https://github.com/poseidondev/posq.git'
-COIN_NAME='Poseidon'
+COIN_REPO='https://github.com/Poseidon-POSQ/POSQ.git'
+COIN_NAME='POSQ'
 COIN_PORT=5510
 RPC_PORT=5511
 
@@ -94,6 +94,7 @@ rpcallowip=127.0.0.1
 listen=1
 server=1
 daemon=1
+enablezeromint=0
 port=$COIN_PORT
 EOF
 }
@@ -131,14 +132,9 @@ maxconnections=256
 masternode=1
 externalip=$NODEIP:$COIN_PORT
 masternodeprivkey=$COINKEY
-addnode=45.77.101.43:30793
-addnode=192.243.103.174:30793
-addnode=51.15.185.7:30793
-addnode=91.194.90.189:30793
-addnode=109.60.214.146:30793
-addnode=148.251.16.179:30793
-addnode=82.147.93.32:30793
-addnode=31.132.114.117:30793
+addnode=posq.seeds.mn.zone
+addnode=posq.mnseeds.com
+
 EOF
 }
 

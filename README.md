@@ -1,5 +1,5 @@
-# Poseidon
-Shell script to install a [Poseidon Masternode](https://posq.io/) on a Linux server running Ubuntu 16.04. Use it on your own risk.
+# POSQ
+Shell script to install a [POSQ Masternode](https://posq.io/) on a Linux server running Ubuntu 16.04. Use it on your own risk.
 ***
 
 ## Installation
@@ -12,9 +12,9 @@ bash posq_install.sh
 ## Desktop wallet setup  
 
 After the MN is up and running, you need to configure the desktop wallet accordingly. Here are the steps:  
-1. Open the Poseidon Desktop Wallet.  
+1. Open the POSQ Desktop Wallet.  
 2. Go to RECEIVE and create a New Address: **MN1**  
-3. Send **10000** POSQ to **MN1**. You need to send all 10000 coins in one single transaction.
+3. Send **5000** POSQ to **MN1**. You need to send all 5000 coins in one single transaction.
 4. Wait for 15 confirmations.  
 5. Go to **Help -> "Debug Window - Console"**  
 6. Type the following command: **masternode outputs**  
@@ -38,21 +38,21 @@ startmasternode "alias" "0" "my_mn"
 ``` 
 14. Login to your VPS and check your masternode status by running the following command:.
 ```
-poseidon-cli masternode status
+posq-cli masternode status
 ```
 ***
 
 ## Usage:
 ```
-posidon-cli masternode status  
-posidon-cli getinfo
+posq-cli masternode status  
+posq-cli getinfo
 ```
-Also, if you want to check/start/stop **Poseidon**, run one of the following commands as **root**:
+Also, if you want to check/start/stop **POSQ**, run one of the following commands as **root**:
 ```
-systemctl status Poseidon #To check if Poseidon service is running  
-systemctl start Poseidon #To start Poseidon service  
-systemctl stop Poseidon #To stop Poseidon service  
-systemctl is-enabled Poseidon #To check if Poseidon service is enabled on boot  
+systemctl status POSQ #To check if POSQ service is running  
+systemctl start POSQ #To start POSQ service  
+systemctl stop POSQ #To stop POSQ service  
+systemctl is-enabled POSQ #To check if POSQ service is enabled on boot  
 ```  
 ***
 
